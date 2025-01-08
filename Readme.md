@@ -32,15 +32,19 @@ The recommendation system aims to provide users with personalized movie recommen
 ```
 MovieRecommendationSystem
 │
-├── Algorithm_JupyterNotebooks
-│   ├── 1_线性回归最小二乘法.ipynb
-│   ├── 2_线性回归梯度下降法.ipynb
-│   ├── 3_线性回归调sklearn库.ipynb
-│   ├── 4_knn代码实现.ipynb
-│   ├── 5_kmeans代码实现.ipynb
-│   ├── 6_tfidf代码实现.ipynb
-│   ├── 7_LFM梯度下降代码实现.ipynb
-│   └── data.csv
+├── Algorithm_JupyterNotebook
+│   ├── 1_linear regression minimum least squares.ipynb
+│   ├── 2_linear regression gradient descent.ipynb
+│   ├── 3_linear regression Sklearn.ipynb
+│   ├── 4_knn code implementation.ipynb
+│   ├── 5_kmeans code implementation.ipynb
+│   ├── 6_tfidf code implementation.ipynb
+│   ├── 7_LFM gradient drop code implementation.ipynb
+│   ├── data.csv
+│   └── .ipynb_checkpoints
+│
+├── archive
+│   └── fileProcessing.ipynb
 │
 ├── Project_MovieRecommendSystem
 │   ├── .idea
@@ -55,9 +59,30 @@ MovieRecommendationSystem
 
 ### Key Components:
 
-- **Algorithm\_JupyterNotebooks**: Contains Jupyter Notebooks with implementations of different machine learning algorithms used in the recommendation system.
-- **Project\_MovieRecommendSystem**: Contains backend server code for deploying the recommendation system.
-- **data.csv**: Dataset used for training and testing the recommendation system.
+- **Algorithm_JupyterNotebook**: Contains Jupyter Notebooks with implementations of different machine learning algorithms used in the recommendation system. Each notebook demonstrates a specific algorithm, such as linear regression, KNN, K-means clustering, TF-IDF, and latent factor models.
+  - **1_linear regression minimum least squares.ipynb**: Demonstrates linear regression using the least squares method.
+  - **2_linear regression gradient descent.ipynb**: Shows linear regression with gradient descent.
+  - **3_linear regression Sklearn.ipynb**: Implements linear regression using Scikit-learn.
+  - **4_knn code implementation.ipynb**: Implements the K-Nearest Neighbors algorithm.
+  - **5_kmeans code implementation.ipynb**: Demonstrates the K-Means clustering algorithm.
+  - **6_tfidf code implementation.ipynb**: Uses TF-IDF for text-based recommendations.
+  - **7_LFM gradient drop code implementation.ipynb**: Implements the Latent Factor Model with gradient descent.
+  - **data.csv**: Dataset used for training and testing the recommendation system.
+
+- **archive**: Contains older or auxiliary notebooks used for data processing or exploratory analysis.
+  - **fileProcessing.ipynb**: A notebook for processing and preparing raw data.
+
+- **Project_MovieRecommendSystem**: Contains backend server code for deploying the recommendation system.
+  - **.idea**: IDE configuration files for IntelliJ IDEA.
+  - **businessServer**: Contains the business logic and API endpoints for the recommendation system.
+  - **recommender**: The core recommendation engine that processes user data and generates movie recommendations.
+  - **spark-warehouse**: An optional component for large-scale data processing using Apache Spark.
+
+- **.gitignore**: A standard `.gitignore` file to exclude unnecessary files and directories from version control.
+
+- **MovieRecommendSystem.iml**: An IntelliJ IDEA project file that helps manage project settings in the IDE.
+
+- **pom.xml**: A Maven configuration file used to manage project dependencies and build processes for the backend server.
 
 ---
 
@@ -120,7 +145,7 @@ The recommendation system can be used in the following ways:
 
 The project implements the following algorithms:
 
-1. **Linear Regression (最小二乘法 & 梯度下降法)**
+1. **Linear Regression (Least Squares & Gradient Descent)**
    - Implemented using both the least squares method and gradient descent.
 2. **K-Nearest Neighbors (KNN)**
    - A simple, instance-based algorithm for recommendations.
@@ -157,7 +182,7 @@ The dataset used for this project is provided in the `data.csv` file. This file 
 - **Rating**: The rating given by a user to a particular movie (e.g., on a scale of 1 to 5).
 - **Timestamp**: The time when the rating was provided.
 
-This dataset is essential for training and evaluating the recommendation models. It can be used to build both collaborative filtering and content-based filtering models. The source of the dataset is a publicly available movie dataset, ensuring compliance with data privacy and usage guidelines. It contains user-item interactions that are used to train and evaluate the recommendation models.
+This dataset is essential for training and evaluating the recommendation models. It can be used to build both collaborative filtering and content-based filtering models. The source of the dataset is a publicly available movie dataset, ensuring compliance with data privacy and usage guidelines.
 
 ---
 
@@ -185,6 +210,4 @@ We welcome contributions to improve the Movie Recommendation System project! Ple
 6. **Create a Pull Request**: Go to the original repository and create a pull request, describing your changes in detail.
 
 Feel free to fork the repository and contribute to the project by submitting a pull request!
-
-
 
